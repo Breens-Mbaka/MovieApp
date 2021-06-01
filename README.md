@@ -27,3 +27,5 @@ I want to be able to have this kind of UI
 - Jetpack Navigation
 - Material UI
 - Datastore (Soon to be used)
+
+[View initial project video](https://drive.google.com/file/d/1Z7huXILzHQfELQ1HBK89nbZqer5tjkZF/view?usp=sharing)
