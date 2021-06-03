@@ -1,4 +1,4 @@
-package com.carolmusyoka.movieapp.popular
+package com.carolmusyoka.movieapp.popular.series
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
