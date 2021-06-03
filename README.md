@@ -1,7 +1,7 @@
 # MovieApp
 A basic movie app to help me grasp some android tech stacks etc
 
-# Project RoadMap
+Project Roadmap
 
 - [x] Creating a new Movie app project
 - [x] Working with the API to fetch data
