@@ -15,6 +15,7 @@ import com.carolmusyoka.movieapp.data.api.ApiHelper
 import com.carolmusyoka.movieapp.data.api.RetrofitBuilder
 import com.carolmusyoka.movieapp.data.model.Popular
 import com.carolmusyoka.movieapp.data.model.Result
+import com.carolmusyoka.movieapp.popular.movies.DefaultItemDecorator
 import com.carolmusyoka.movieapp.popular.movies.adapter.PopularMoviesListAdapter
 import com.carolmusyoka.movieapp.popular.movies.viewmodel.PopularMoviesViewModel
 import com.carolmusyoka.movieapp.popular.movies.viewmodel.ViewModelFactory
@@ -60,6 +61,7 @@ class MoviesFragment : Fragment(R.layout.fragment_movies) {
                         resource.data?.let { popular ->
                             val popularList: List<Result> = popular.results
                             pop_movies_grid.setHasFixedSize(true)
+                            pop_movies_grid.addItemDecoration(DefaultItemDecorator(4, 6))
                             Log.d("TAG", "setupObservers: " +it.message)
                             popularMoviesListAdapter = PopularMoviesListAdapter(popularList)
                             pop_movies_grid.adapter = popularMoviesListAdapter
