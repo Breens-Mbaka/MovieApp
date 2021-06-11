@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <integer name="animation_duration">350</integer>
+    <integer name="recyclerview_span_count">3</integer>
 </resources>
