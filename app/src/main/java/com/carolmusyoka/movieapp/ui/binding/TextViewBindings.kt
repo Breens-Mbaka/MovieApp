@@ -3,7 +3,7 @@ package com.carolmusyoka.movieapp.ui.binding
 import android.annotation.SuppressLint
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
-import com.carolmusyoka.movieapp.data.db.remote.TheMovieDatabaseAPI
+import com.carolmusyoka.movieapp.data.db.remote.ApiService
 import com.carolmusyoka.movieapp.data.model.entity.Genre
 import com.carolmusyoka.movieapp.util.appendZeroBeforeNumber
 import java.text.SimpleDateFormat
@@ -43,7 +43,7 @@ fun TextView.bindMovieRuntime(runtimeInMinutes: Int?) {
 @BindingAdapter("bind_date_text")
 fun TextView.bindMovieRuntime(dateString: String?) {
     if (dateString.isNullOrBlank()) return
-    val date = SimpleDateFormat(TheMovieDatabaseAPI.getRuntimeDateFormat()).parse(dateString)
+    val date = SimpleDateFormat(ApiService.getRuntimeDateFormat()).parse(dateString)
     val pat =
         SimpleDateFormat().toLocalizedPattern().replace("\\W?[HhKkmsSzZXa]+\\W?".toRegex(), "")
     val localFormatter = SimpleDateFormat(pat, Locale.getDefault())

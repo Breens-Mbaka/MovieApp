@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.switchMap
-import com.carolmusyoka.movieapp.data.db.repository.TvRepository
+import com.carolmusyoka.movieapp.data.db.repository.SeriesRepository
 import com.carolmusyoka.movieapp.data.model.Event
 import com.carolmusyoka.movieapp.data.model.GoToTvShow
 import com.carolmusyoka.movieapp.data.model.entity.TvShow
@@ -14,7 +14,7 @@ import com.carolmusyoka.movieapp.util.extension.liveDataBlockScope
 
 class TvShowsViewModel : BaseViewModel(), GoToTvShow {
 
-    private val tvShowRepository = TvRepository()
+    private val tvShowRepository = SeriesRepository()
     private val loadedTvShowList: LiveData<List<TvShow>>
     private val tvShowsPage = MutableLiveData<Int>().apply { value = 1 }
 

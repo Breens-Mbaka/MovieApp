@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.carolmusyoka.movieapp.data.db.repository.TvRepository
+import com.carolmusyoka.movieapp.data.db.repository.SeriesRepository
 import com.carolmusyoka.movieapp.data.model.Event
 import com.carolmusyoka.movieapp.data.model.GoToCast
 import com.carolmusyoka.movieapp.data.model.GoToVideo
@@ -23,7 +23,7 @@ class TVShowDetailsViewModelFactory(private val tvShowId: Int) :
 
 class TVShowDetailsViewModel(tvShowId: Int) : BaseViewModel(), GoToVideo, GoToCast {
 
-    private val tvShowRepository = TvRepository()
+    private val tvShowRepository = SeriesRepository()
     val tvShow: LiveData<TvShowDetails>
     val videoList: LiveData<List<Video>>
     val castList: LiveData<List<Cast>>

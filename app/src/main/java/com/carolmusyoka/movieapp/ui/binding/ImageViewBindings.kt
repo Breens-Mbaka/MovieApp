@@ -5,7 +5,7 @@ import android.widget.ImageView
 import android.widget.ProgressBar
 import androidx.databinding.BindingAdapter
 import com.carolmusyoka.movieapp.R
-import com.carolmusyoka.movieapp.data.db.remote.TheMovieDatabaseAPI
+import com.carolmusyoka.movieapp.data.db.remote.ApiService
 import com.carolmusyoka.movieapp.data.model.entity.Movie
 import com.squareup.picasso.Callback
 import com.squareup.picasso.Picasso
@@ -22,7 +22,7 @@ fun ImageView.bindBackdropImageWithPicassoLoadingMovie(movie: Movie?, progressBa
     }
 
     progressBar.visibility = View.VISIBLE
-    Picasso.get().load(TheMovieDatabaseAPI.getBackdropUrl(backdropPath)).fit()
+    Picasso.get().load(ApiService.getBackdropUrl(backdropPath)).fit()
         .transform(RoundedCornersTransformation(4, 1))
         .error(R.drawable.ic_baseline_image_24)
         .into(this, object : Callback {
@@ -43,7 +43,7 @@ fun ImageView.bindBackdropImageWithPicassoLoading(path: String?, progressBar: Pr
         return
     }
     progressBar.visibility = View.VISIBLE
-    Picasso.get().load(TheMovieDatabaseAPI.getBackdropUrl(path)).fit()
+    Picasso.get().load(ApiService.getBackdropUrl(path)).fit()
         .transform(RoundedCornersTransformation(4, 1))
         .error(R.drawable.ic_baseline_image_24)
         .into(this, object : Callback {
@@ -63,7 +63,7 @@ fun ImageView.bindPosterImageWithPicasso(path: String?) {
         this.setImageResource(R.drawable.ic_baseline_image_24)
         return
     }
-    Picasso.get().load(TheMovieDatabaseAPI.getPosterUrl(path)).fit()
+    Picasso.get().load(ApiService.getPosterUrl(path)).fit()
         .transform(RoundedCornersTransformation(4, 1))
         .error(R.drawable.ic_baseline_image_24).into(this)
 }
@@ -74,7 +74,7 @@ fun ImageView.bindProfileImageWithPicasso(path: String?) {
         this.setImageResource(R.drawable.ic_baseline_image_24)
         return
     }
-    Picasso.get().load(TheMovieDatabaseAPI.getProfileUrl(path)).fit()
+    Picasso.get().load(ApiService.getProfileUrl(path)).fit()
         .error(R.drawable.ic_baseline_image_24).into(this)
 }
 
@@ -84,7 +84,7 @@ fun ImageView.bindVideoThumbnailWithPicasso(youtubeId: String?) {
         this.setImageResource(R.drawable.ic_baseline_image_24)
         return
     }
-    Picasso.get().load(TheMovieDatabaseAPI.getYoutubeImageUrl(youtubeId)).fit()
+    Picasso.get().load(ApiService.getYoutubeImageUrl(youtubeId)).fit()
         .error(R.drawable.ic_baseline_image_24).into(this)
 }
 
@@ -94,6 +94,6 @@ fun ImageView.bindProfileImageWithPicassoNoFit(path: String?) {
         this.setImageResource(R.drawable.ic_baseline_image_24)
         return
     }
-    Picasso.get().load(TheMovieDatabaseAPI.getProfileUrl(path))
+    Picasso.get().load(ApiService.getProfileUrl(path))
         .error(R.drawable.ic_baseline_image_24).into(this)
 }

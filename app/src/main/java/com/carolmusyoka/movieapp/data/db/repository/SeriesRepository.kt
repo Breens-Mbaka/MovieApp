@@ -1,17 +1,17 @@
 package com.carolmusyoka.movieapp.data.db.repository
 
 import androidx.lifecycle.MutableLiveData
-import com.carolmusyoka.movieapp.data.db.remote.TheMovieDatabaseAPI
+import com.carolmusyoka.movieapp.data.db.remote.ApiService
 import com.carolmusyoka.movieapp.data.model.entity.Cast
 import com.carolmusyoka.movieapp.data.model.entity.TvShow
 import com.carolmusyoka.movieapp.data.model.entity.TvShowDetails
 import com.carolmusyoka.movieapp.data.model.entity.Video
-import com.carolmusyoka.movieapp.util.ServiceBuilder
+import com.carolmusyoka.movieapp.util.RetrofitBuilder
 
 
-class TvRepository : BaseRepository() {
+class SeriesRepository : BaseRepository() {
     private val tvService =
-        ServiceBuilder.buildService(TheMovieDatabaseAPI.TvService::class.java)
+        RetrofitBuilder.buildService(ApiService.TvService::class.java)
 
     suspend fun loadDiscoverList(id: Int, errorText: (String) -> Unit) =
         loadPageListCall(
