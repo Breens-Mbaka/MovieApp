@@ -21,6 +21,12 @@
         android:orientation="vertical"
         android:visibility="@{viewmodel.person != null ? View.VISIBLE : View.INVISIBLE}">
 
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -54,23 +60,43 @@
             </com.google.android.material.card.MaterialCardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/nameText"
+                    style="@style/TitleStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="200dp"
+                    android:text="@{viewmodel.person.name}"
+                    android:textSize="36sp"
+                    tools:text="Name" />
 
-        <TextView
-            android:id="@+id/nameText"
-            style="@style/TitleStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:text="@{viewmodel.person.name}"
-            android:textSize="36sp"
-            tools:text="Name" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="200dp"
+                    android:text="@{viewmodel.person.knownForDepartment}"
+                    android:textSize="14sp"
+                    tools:text="Acting" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@{viewmodel.person.knownForDepartment}"
-            android:textSize="14sp"
-            tools:text="Acting" />
+                <TextView
+                    style="@style/NunitoSemiBoldStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/biography"
+                    android:textSize="18sp"
+                    app:bind_visibility_hide_empty_string="@{viewmodel.person.biography}" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -89,14 +115,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
-
-                    <TextView
-                        style="@style/NunitoSemiBoldStyle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/biography"
-                        android:textSize="18sp"
-                        app:bind_visibility_hide_empty_string="@{viewmodel.person.biography}" />
 
                     <TextView
                         android:id="@+id/biographyText"
