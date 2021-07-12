@@ -51,9 +51,9 @@ fun RecyclerView.bindMovieList(
 
 @BindingAdapter("bind_tv_show_list", "bind_load_more", "bind_view_model")
 fun RecyclerView.bindTvShowList(
-    items: List<TvShow>?,
+    items: List<TvSeries>?,
     loadMoreContent: () -> Unit,
-    goTo: GoToTvShow
+    goTo: GoToTvSeries
 ) {
     if (items == null) return
     if (this.adapter == null) {

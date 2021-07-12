@@ -1,7 +1,6 @@
 package com.carolmusyoka.movieapp.data.model.network
 
-import com.carolmusyoka.movieapp.data.model.entity.TvShow
-import com.carolmusyoka.movieapp.data.model.network.BasePageListResponse
+import com.carolmusyoka.movieapp.data.model.entity.TvSeries
 import com.google.gson.annotations.SerializedName
 
 data class TvDiscoverResponse(
@@ -9,5 +8,5 @@ data class TvDiscoverResponse(
     override var page: Int,
 
     @SerializedName("results")
-    override var results: List<TvShow>
-) : BasePageListResponse<TvShow>
+    override var results: List<TvSeries>
+) : BasePageListResponse<TvSeries>

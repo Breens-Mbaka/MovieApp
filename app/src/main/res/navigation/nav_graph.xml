@@ -27,7 +27,7 @@
             app:destination="@id/movieDetailsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/navigation_tv_shows"
+        android:id="@+id/navigation_tv_series"
         android:name="com.carolmusyoka.movieapp.ui.tv_shows.TvShowsFragment"
         android:label="@string/title_series"
         tools:layout="@layout/fragment_tv_shows">

@@ -27,11 +27,11 @@ interface GoToMovie {
     }
 }
 
-interface GoToTvShow {
-    val goToTvShowEvent: MutableLiveData<Event<TvShow>>
+interface GoToTvSeries {
+    val goToTvSeriesEvent: MutableLiveData<Event<TvSeries>>
 
-    fun goTo(tvShow: TvShow) {
-        goToTvShowEvent.value = Event(tvShow)
+    fun goTo(tvSeries: TvSeries) {
+        goToTvSeriesEvent.value = Event(tvSeries)
     }
 }
 

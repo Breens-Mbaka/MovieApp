@@ -32,7 +32,7 @@ class TvShowsFragment : BaseFragment(false) {
 
     override fun setupViewModelObservers() {
         viewModel.snackBarText.observe(viewLifecycleOwner, EventObserver { view?.showSnackBar(it) })
-        viewModel.goToTvShowEvent.observe(
+        viewModel.goToTvSeriesEvent.observe(
             viewLifecycleOwner,
             EventObserver { navigateToTvShowDetails(it.id, it.title) })
     }

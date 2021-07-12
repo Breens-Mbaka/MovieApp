@@ -8,31 +8,31 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
-import com.carolmusyoka.movieapp.data.model.GoToTvShow
+import com.carolmusyoka.movieapp.data.model.GoToTvSeries
 import com.carolmusyoka.movieapp.data.model.InfiniteContentScrollListener
-import com.carolmusyoka.movieapp.data.model.entity.TvShow
+import com.carolmusyoka.movieapp.data.model.entity.TvSeries
 import com.carolmusyoka.movieapp.databinding.ListItemTvShowBinding
 import com.carolmusyoka.movieapp.databinding.ListItemTvShowGridBinding
 
 
 class TvShowListAdapter internal constructor(
-    private val goToTvShow: GoToTvShow,
+    private val goToTvSeries: GoToTvSeries,
     private val infiniteContentScrollListener: InfiniteContentScrollListener
-) : ListAdapter<(TvShow), TvShowListAdapter.ViewHolder>(TvShowDiffCallback()) {
+) : ListAdapter<(TvSeries), TvShowListAdapter.ViewHolder>(TvShowDiffCallback()) {
 
     private var isTvShowItemGrid: Boolean = false
 
     class ViewHolder(private val binding: ViewBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(goToTvShow: GoToTvShow, item: TvShow) {
+        fun bind(goToTvSeries: GoToTvSeries, item: TvSeries) {
             when (binding) {
                 is ListItemTvShowBinding -> {
-                    binding.goToInterface = goToTvShow
+                    binding.goToInterface = goToTvSeries
                     binding.tvShow = item
                     binding.executePendingBindings()
                 }
                 is ListItemTvShowGridBinding -> {
-                    binding.goToInterface = goToTvShow
+                    binding.goToInterface = goToTvSeries
                     binding.tvShow = item
                     binding.executePendingBindings()
                 }
@@ -41,15 +41,15 @@ class TvShowListAdapter internal constructor(
         }
     }
 
-    override fun submitList(list: List<TvShow>?) {
-        val newList: MutableList<TvShow> = arrayListOf()
+    override fun submitList(list: List<TvSeries>?) {
+        val newList: MutableList<TvSeries> = arrayListOf()
         if (list != null) newList.addAll(list)
         super.submitList(newList)
         infiniteContentScrollListener.itemsLoaded()
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(goToTvShow, getItem(position))
+        holder.bind(goToTvSeries, getItem(position))
     }
 
     override fun onAttachedToRecyclerView(recyclerView: RecyclerView) {
@@ -67,12 +67,12 @@ class TvShowListAdapter internal constructor(
         return ViewHolder(binding)
     }
 
-    private class TvShowDiffCallback : DiffUtil.ItemCallback<TvShow>() {
-        override fun areItemsTheSame(oldItem: TvShow, newItem: TvShow): Boolean {
+    private class TvShowDiffCallback : DiffUtil.ItemCallback<TvSeries>() {
+        override fun areItemsTheSame(oldItem: TvSeries, newItem: TvSeries): Boolean {
             return oldItem == newItem
         }
 
-        override fun areContentsTheSame(oldItem: TvShow, newItem: TvShow): Boolean {
+        override fun areContentsTheSame(oldItem: TvSeries, newItem: TvSeries): Boolean {
             return oldItem.id == newItem.id
         }
     }
