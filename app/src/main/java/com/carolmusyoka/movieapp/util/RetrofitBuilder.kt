@@ -3,16 +3,16 @@ package com.carolmusyoka.movieapp.util
 
 
 import com.carolmusyoka.movieapp.BuildConfig
-import com.carolmusyoka.movieapp.data.db.remote.TheMovieDatabaseAPI
+import com.carolmusyoka.movieapp.data.db.remote.ApiService
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-object ServiceBuilder {
+object RetrofitBuilder {
     private val okHttp = OkHttpClient.Builder().addInterceptor(RequestInterceptor())
-    private val retrofit = Retrofit.Builder().baseUrl(TheMovieDatabaseAPI.BASE_API_URL)
+    private val retrofit = Retrofit.Builder().baseUrl(ApiService.BASE_API_URL)
         .addConverterFactory(GsonConverterFactory.create())
         .client(okHttp.build()).build()
 

@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.carolmusyoka.movieapp.data.db.remote.TheMovieDatabaseAPI
+import com.carolmusyoka.movieapp.data.db.remote.ApiService
 import com.carolmusyoka.movieapp.data.model.EventObserver
 import com.carolmusyoka.movieapp.databinding.FragmentPersonDetailsBinding
 import com.carolmusyoka.movieapp.ui.BaseFragment
@@ -38,7 +38,7 @@ class PersonDetailsFragment : BaseFragment(true) {
         viewModel.snackBarText.observe(viewLifecycleOwner, EventObserver { view?.showSnackBar(it) })
         viewModel.goToImageEvent.observe(
             viewLifecycleOwner,
-            EventObserver { openUrl(TheMovieDatabaseAPI.getProfileUrl(it.filePath)) })
+            EventObserver { openUrl(ApiService.getProfileUrl(it.filePath)) })
 
         viewModel.goToCreditEvent.observe(viewLifecycleOwner, EventObserver {
             if (it.mediaType == "movie") {

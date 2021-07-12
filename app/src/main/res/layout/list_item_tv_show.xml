@@ -9,11 +9,11 @@
 
         <variable
             name="goToInterface"
-            type="com.carolmusyoka.movieapp.data.model.GoToTvShow" />
+            type="com.carolmusyoka.movieapp.data.model.GoToTvSeries" />
 
         <variable
             name="tvShow"
-            type="com.carolmusyoka.movieapp.data.model.entity.TvShow" />
+            type="com.carolmusyoka.movieapp.data.model.entity.TvSeries" />
 
     </data>
 

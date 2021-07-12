@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.carolmusyoka.movieapp.data.db.remote.TheMovieDatabaseAPI
+import com.carolmusyoka.movieapp.data.db.remote.ApiService
 import com.carolmusyoka.movieapp.data.model.EventObserver
 import com.carolmusyoka.movieapp.databinding.FragmentTvShowDetailsBinding
 import com.carolmusyoka.movieapp.ui.BaseFragment
@@ -40,7 +40,7 @@ class TvShowDetailsFragment : BaseFragment(true) {
             EventObserver { navigateToPersonDetails(it.id, it.name) })
         viewModel.goToVideoEvent.observe(
             viewLifecycleOwner,
-            EventObserver { openUrl(TheMovieDatabaseAPI.getYoutubeWatchUrl(it.key)) })
+            EventObserver { openUrl(ApiService.getYoutubeWatchUrl(it.key)) })
     }
 
     private fun navigateToPersonDetails(personId: Int, personName: String) {

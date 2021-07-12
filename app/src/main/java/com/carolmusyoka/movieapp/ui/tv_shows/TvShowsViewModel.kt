@@ -4,31 +4,31 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.switchMap
-import com.carolmusyoka.movieapp.data.db.repository.TvRepository
+import com.carolmusyoka.movieapp.data.db.repository.SeriesRepository
 import com.carolmusyoka.movieapp.data.model.Event
-import com.carolmusyoka.movieapp.data.model.GoToTvShow
-import com.carolmusyoka.movieapp.data.model.entity.TvShow
+import com.carolmusyoka.movieapp.data.model.GoToTvSeries
+import com.carolmusyoka.movieapp.data.model.entity.TvSeries
 import com.carolmusyoka.movieapp.ui.BaseViewModel
 import com.carolmusyoka.movieapp.util.extension.appendList
 import com.carolmusyoka.movieapp.util.extension.liveDataBlockScope
 
-class TvShowsViewModel : BaseViewModel(), GoToTvShow {
+class TvShowsViewModel : BaseViewModel(), GoToTvSeries {
 
-    private val tvShowRepository = TvRepository()
-    private val loadedTvShowList: LiveData<List<TvShow>>
+    private val tvShowRepository = SeriesRepository()
+    private val loadedTvSeriesList: LiveData<List<TvSeries>>
     private val tvShowsPage = MutableLiveData<Int>().apply { value = 1 }
 
-    val tvShowList = MediatorLiveData<MutableList<TvShow>>()
+    val tvShowList = MediatorLiveData<MutableList<TvSeries>>()
 
-    override val goToTvShowEvent: MutableLiveData<Event<TvShow>> = MutableLiveData()
+    override val goToTvSeriesEvent: MutableLiveData<Event<TvSeries>> = MutableLiveData()
 
     init {
-        loadedTvShowList = tvShowsPage.switchMap {
+        loadedTvSeriesList = tvShowsPage.switchMap {
             liveDataBlockScope {
                 tvShowRepository.loadDiscoverList(it) { mSnackBarText.postValue(Event(it)) }
             }
         }
-        tvShowList.addSource(loadedTvShowList) { it?.let { list -> tvShowList.appendList(list) } }
+        tvShowList.addSource(loadedTvSeriesList) { it?.let { list -> tvShowList.appendList(list) } }
     }
 
     fun loadMoreTvShows() {

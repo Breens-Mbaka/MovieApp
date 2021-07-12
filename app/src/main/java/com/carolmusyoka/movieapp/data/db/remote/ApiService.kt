@@ -10,7 +10,7 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 
-object TheMovieDatabaseAPI {
+object ApiService {
 
     private const val API_VERSION: Int = 3
     private const val BASE_POSTER_URL = "https://image.tmdb.org/t/p/w185"

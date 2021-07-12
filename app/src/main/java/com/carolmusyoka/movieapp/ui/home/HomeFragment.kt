@@ -43,8 +43,7 @@ class HomeFragment : BaseFragment(false) {
     }
 
     private fun navigateToMovieDetails(movieId: Int, movieTitle: String) {
-        val action =
-            HomeFragmentDirections.actionNavigationHomeToMovieDetailsFragment(movieId, movieTitle)
+        val action = HomeFragmentDirections.actionNavigationHomeToMovieDetailsFragment(movieId, movieTitle)
         findNavController().navigate(action)
     }
 }

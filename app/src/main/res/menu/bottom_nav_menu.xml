@@ -12,7 +12,7 @@
         android:title="@string/title_movies" />
 
     <item
-        android:id="@+id/navigation_tv_shows"
+        android:id="@+id/navigation_tv_series"
         android:icon="@drawable/ic_baseline_tv_24"
-        android:title="@string/title_tv_shows" />
+        android:title="@string/title_series" />
 </menu>

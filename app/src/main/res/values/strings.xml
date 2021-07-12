@@ -2,7 +2,7 @@
     <string name="app_name">Movie App</string>
     <string name="title_home">Home</string>
     <string name="title_movies">Movies</string>
-    <string name="title_tv_shows">TV Shows</string>
+    <string name="title_series">TV Series</string>
     <string name="popular">Popular</string>
     <string name="show_all">Show all</string>
     <string name="upcoming">Upcoming</string>

@@ -1,16 +1,16 @@
 package com.carolmusyoka.movieapp.data.db.repository
 
 import androidx.lifecycle.MutableLiveData
-import com.carolmusyoka.movieapp.data.db.remote.TheMovieDatabaseAPI
+import com.carolmusyoka.movieapp.data.db.remote.ApiService
 import com.carolmusyoka.movieapp.data.model.entity.Credit
 import com.carolmusyoka.movieapp.data.model.entity.Image
 import com.carolmusyoka.movieapp.data.model.entity.Person
-import com.carolmusyoka.movieapp.util.ServiceBuilder
+import com.carolmusyoka.movieapp.util.RetrofitBuilder
 
 
 class PersonRepository : BaseRepository() {
     private val peopleService =
-        ServiceBuilder.buildService(TheMovieDatabaseAPI.PeopleService::class.java)
+        RetrofitBuilder.buildService(ApiService.PeopleService::class.java)
 
     suspend fun loadDetails(id: Int, errorText: (String) -> Unit) =
         loadCall({ peopleService.fetchDetails(id) }, MutableLiveData<Person>(), errorText)

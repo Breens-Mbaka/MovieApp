@@ -22,13 +22,13 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
                 R.id.navigation_home -> navView.visibility = View.VISIBLE
-                R.id.navigation_tv_shows -> navView.visibility = View.VISIBLE
+                R.id.navigation_tv_series -> navView.visibility = View.VISIBLE
                 R.id.navigation_movies -> navView.visibility = View.VISIBLE
                 else -> navView.visibility = View.GONE
             }
         }
         val appBarConfiguration = AppBarConfiguration(
-            setOf(R.id.navigation_home, R.id.navigation_tv_shows, R.id.navigation_movies)
+            setOf(R.id.navigation_home, R.id.navigation_tv_series, R.id.navigation_movies)
         )
 
         setupActionBarWithNavController(navController, appBarConfiguration)

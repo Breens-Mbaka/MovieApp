@@ -1,17 +1,17 @@
 package com.carolmusyoka.movieapp.data.db.repository
 
 import androidx.lifecycle.MutableLiveData
-import com.carolmusyoka.movieapp.data.db.remote.TheMovieDatabaseAPI
+import com.carolmusyoka.movieapp.data.db.remote.ApiService
 import com.carolmusyoka.movieapp.data.model.entity.Cast
 import com.carolmusyoka.movieapp.data.model.entity.Genre
 import com.carolmusyoka.movieapp.data.model.entity.Movie
 import com.carolmusyoka.movieapp.data.model.entity.Video
-import com.carolmusyoka.movieapp.util.ServiceBuilder
+import com.carolmusyoka.movieapp.util.RetrofitBuilder
 
 
 class MovieRepository : BaseRepository() {
     private val movieService =
-        ServiceBuilder.buildService(TheMovieDatabaseAPI.MovieService::class.java)
+        RetrofitBuilder.buildService(ApiService.MovieService::class.java)
 
     suspend fun loadPopularList(page: Int, errorText: (String) -> Unit) =
         loadPageListCall(
