@@ -16,6 +16,6 @@
     <string name="person_image">person image</string>
     <string name="biography">BIOGRAPHY</string>
     <string name="photos">PHOTOS</string>
-    <string name="known_for">KNOWN FOR</string>
+    <string name="known_for">ALSO STARS IN</string>
     <string name="highlighted_movie_image">highlighted movie image</string>
 </resources>
