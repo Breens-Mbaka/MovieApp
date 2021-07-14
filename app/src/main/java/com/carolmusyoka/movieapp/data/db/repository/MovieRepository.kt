@@ -10,8 +10,7 @@ import com.carolmusyoka.movieapp.util.RetrofitBuilder
 
 
 class MovieRepository : BaseRepository() {
-    private val movieService =
-        RetrofitBuilder.buildService(ApiService.MovieService::class.java)
+    private val movieService = RetrofitBuilder.buildService(ApiService.MovieService::class.java)
 
     suspend fun loadPopularList(page: Int, errorText: (String) -> Unit) =
         loadPageListCall(
