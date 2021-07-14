@@ -30,7 +30,7 @@
         android:id="@+id/navigation_tv_series"
         android:name="com.carolmusyoka.movieapp.ui.tv_shows.TvShowsFragment"
         android:label="@string/title_series"
-        tools:layout="@layout/fragment_tv_shows">
+        tools:layout="@layout/fragment_tv_series">
         <action
             android:id="@+id/action_navigation_tv_shows_to_TVShowDetailsFragment"
             app:destination="@id/tvShowDetailsFragment" />
