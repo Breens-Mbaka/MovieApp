@@ -52,6 +52,10 @@ object ApiService {
 
         @GET("/$API_VERSION/genre/movie/list")
         fun fetchMovieGenreList(): Call<GenresResponse>
+
+        @GET("/$API_VERSION/discover/movie")
+        fun fetchMovieGenre(@Query("with_genres") withGenres: Int,
+                            @Query("page") page: Int): Call<GenresResponse>
     }
 
     interface TvService {
