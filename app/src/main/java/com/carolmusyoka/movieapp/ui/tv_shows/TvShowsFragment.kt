@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.carolmusyoka.movieapp.data.model.EventObserver
-import com.carolmusyoka.movieapp.databinding.FragmentTvShowsBinding
+import com.carolmusyoka.movieapp.databinding.FragmentTvSeriesBinding
 import com.carolmusyoka.movieapp.ui.BaseFragment
 import com.carolmusyoka.movieapp.util.extension.showSnackBar
 
@@ -15,14 +15,14 @@ import com.carolmusyoka.movieapp.util.extension.showSnackBar
 class TvShowsFragment : BaseFragment(false) {
 
     private val viewModel: TvShowsViewModel by viewModels()
-    private lateinit var viewDataBinding: FragmentTvShowsBinding
+    private lateinit var viewDataBinding: FragmentTvSeriesBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         viewDataBinding =
-            FragmentTvShowsBinding.inflate(inflater, container, false)
+            FragmentTvSeriesBinding.inflate(inflater, container, false)
                 .apply {
                     viewmodel = viewModel
                     lifecycleOwner = this@TvShowsFragment.viewLifecycleOwner
