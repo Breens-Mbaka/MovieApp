@@ -66,7 +66,7 @@
         android:id="@+id/tvShowDetailsFragment"
         android:name="com.carolmusyoka.movieapp.ui.tv_show_details.TvShowDetailsFragment"
         android:label="{tvShowTitleArg}"
-        tools:layout="@layout/fragment_tv_show_details">
+        tools:layout="@layout/fragment_tv_series_details">
         <argument
             android:name="tvShowIdArg"
             app:argType="integer" />

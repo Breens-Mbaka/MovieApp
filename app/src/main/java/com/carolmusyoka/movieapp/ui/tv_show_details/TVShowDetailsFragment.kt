@@ -9,7 +9,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.carolmusyoka.movieapp.data.db.remote.ApiService
 import com.carolmusyoka.movieapp.data.model.EventObserver
-import com.carolmusyoka.movieapp.databinding.FragmentTvShowDetailsBinding
+import com.carolmusyoka.movieapp.databinding.FragmentTvSeriesDetailsBinding
 import com.carolmusyoka.movieapp.ui.BaseFragment
 import com.carolmusyoka.movieapp.util.extension.openUrl
 import com.carolmusyoka.movieapp.util.extension.showSnackBar
@@ -18,14 +18,14 @@ class TvShowDetailsFragment : BaseFragment(true) {
 
     private val args: TvShowDetailsFragmentArgs by navArgs()
     private val viewModel: TVShowDetailsViewModel by viewModels { TVShowDetailsViewModelFactory(args.tvShowIdArg) }
-    private lateinit var viewDataBinding: FragmentTvShowDetailsBinding
+    private lateinit var viewDataBinding: FragmentTvSeriesDetailsBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         viewDataBinding =
-            FragmentTvShowDetailsBinding.inflate(inflater, container, false)
+            FragmentTvSeriesDetailsBinding.inflate(inflater, container, false)
                 .apply {
                     viewmodel = viewModel
                     lifecycleOwner = this@TvShowDetailsFragment.viewLifecycleOwner
