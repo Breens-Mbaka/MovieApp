@@ -1,4 +1,4 @@
-package com.carolmusyoka.movieapp.ui.tv_show_details
+package com.carolmusyoka.movieapp.ui.tv_series_details
 
 import android.os.Bundle
 import android.view.LayoutInflater
