@@ -1,4 +1,4 @@
-package com.carolmusyoka.movieapp.ui.tv_shows
+package com.carolmusyoka.movieapp.ui.tv_series
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,9 +12,9 @@ import com.carolmusyoka.movieapp.ui.BaseFragment
 import com.carolmusyoka.movieapp.util.extension.showSnackBar
 
 
-class TvShowsFragment : BaseFragment(false) {
+class TvSeriesFragment : BaseFragment(false) {
 
-    private val viewModel: TvShowsViewModel by viewModels()
+    private val viewModel: TvSeriesViewModel by viewModels()
     private lateinit var viewDataBinding: FragmentTvSeriesBinding
 
     override fun onCreateView(
@@ -25,7 +25,7 @@ class TvShowsFragment : BaseFragment(false) {
             FragmentTvSeriesBinding.inflate(inflater, container, false)
                 .apply {
                     viewmodel = viewModel
-                    lifecycleOwner = this@TvShowsFragment.viewLifecycleOwner
+                    lifecycleOwner = this@TvSeriesFragment.viewLifecycleOwner
                 }
         return viewDataBinding.root
     }
@@ -38,7 +38,7 @@ class TvShowsFragment : BaseFragment(false) {
     }
 
     private fun navigateToTvShowDetails(tvShowId: Int, tvShowTitle: String) {
-        val action = TvShowsFragmentDirections.actionNavigationTvShowsToTVShowDetailsFragment(
+        val action = TvSeriesFragmentDirections.actionNavigationTvShowsToTVShowDetailsFragment(
             tvShowId, tvShowTitle
         )
         findNavController().navigate(action)

@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/navigation_tv_series"
-        android:name="com.carolmusyoka.movieapp.ui.tv_shows.TvShowsFragment"
+        android:name="com.carolmusyoka.movieapp.ui.tv_series.TvSeriesFragment"
         android:label="@string/title_series"
         tools:layout="@layout/fragment_tv_series">
         <action
@@ -64,9 +64,9 @@
     </fragment>
     <fragment
         android:id="@+id/tvShowDetailsFragment"
-        android:name="com.carolmusyoka.movieapp.ui.tv_show_details.TvShowDetailsFragment"
+        android:name="com.carolmusyoka.movieapp.ui.tv_series_details.TvShowDetailsFragment"
         android:label="{tvShowTitleArg}"
-        tools:layout="@layout/fragment_tv_show_details">
+        tools:layout="@layout/fragment_tv_series_details">
         <argument
             android:name="tvShowIdArg"
             app:argType="integer" />

@@ -8,7 +8,7 @@
 
         <variable
             name="viewmodel"
-            type="com.carolmusyoka.movieapp.ui.tv_shows.TvShowsViewModel" />
+            type="com.carolmusyoka.movieapp.ui.tv_series.TvSeriesViewModel" />
     </data>
 
 

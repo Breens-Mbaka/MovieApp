@@ -49,6 +49,7 @@
             android:id="@+id/titleText"
             style="@style/NunitoSemiBoldStyle"
             android:layout_width="0dp"
+            android:gravity="center"
             android:layout_height="wrap_content"
             android:alpha=".8"
             android:ellipsize="end"

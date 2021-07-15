@@ -1,4 +1,4 @@
-package com.carolmusyoka.movieapp.ui.tv_shows
+package com.carolmusyoka.movieapp.ui.tv_series
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
@@ -12,7 +12,7 @@ import com.carolmusyoka.movieapp.ui.BaseViewModel
 import com.carolmusyoka.movieapp.util.extension.appendList
 import com.carolmusyoka.movieapp.util.extension.liveDataBlockScope
 
-class TvShowsViewModel : BaseViewModel(), GoToTvSeries {
+class TvSeriesViewModel : BaseViewModel(), GoToTvSeries {
 
     private val tvShowRepository = SeriesRepository()
     private val loadedTvSeriesList: LiveData<List<TvSeries>>

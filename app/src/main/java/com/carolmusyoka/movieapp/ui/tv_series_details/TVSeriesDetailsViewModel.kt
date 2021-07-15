@@ -1,4 +1,4 @@
-package com.carolmusyoka.movieapp.ui.tv_show_details
+package com.carolmusyoka.movieapp.ui.tv_series_details
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
