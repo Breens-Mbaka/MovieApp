@@ -37,6 +37,18 @@
         <item name="android:lineSpacingMultiplier">0.75</item>
     </style>
 
+    <style name="checkable_chip" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="android:checkable">true</item>
+        <item name="android:textColor">@color/chip_colors_text</item>
+        <item name="chipBackgroundColor">@color/chip_colors</item>
+        <item name="checkedIcon">@null</item>
+        <item name="chipIconVisible">false</item>
+        <item name="chipStrokeColor">@color/colorAccent</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="ensureMinTouchTargetSize">true</item>
+        <item name="checkedIconVisible">false</item>
+    </style>
+
     <bool name="lightNavEnabled">false</bool>
 
 </resources>
