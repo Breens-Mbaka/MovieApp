@@ -8,10 +8,7 @@ Project Roadmap
 - [x] Adding Paging 3
 - [x] Pretty Basic UI..planning to come up with a new one
 
-I want to be able to have this kind of UI
 
-
-![GitHub Logo](app.webp)
 
 #Libraries used
 - LifeCycle
