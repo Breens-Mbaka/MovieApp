@@ -7,6 +7,8 @@ Project Roadmap
 - [x] Working with the API to fetch data
 - [x] Adding Paging 3
 - [x] Pretty Basic UI..planning to come up with a new one
+- [ ] Code restructure
+- [ ] Upload on playstore
 
 
 
