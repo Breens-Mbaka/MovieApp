@@ -4,19 +4,17 @@ plugins {
     id 'kotlin-kapt'
     id 'androidx.navigation.safeargs.kotlin'
 }
-Properties properties = new Properties()
-properties.load(project.rootProject.file("local.properties").newDataInputStream())
 android {
-    compileSdkVersion 30
+    compileSdkVersion 31
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.carolmusyoka.movieapp"
         minSdkVersion 21
-        targetSdkVersion 30
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
-        buildConfigField("String", "TMDB_API_KEY", properties.getProperty("tmdb_api_key"))
+        buildConfigField("String", "TMDB_API_KEY", TMDB_API_KEY)
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildFeatures {
