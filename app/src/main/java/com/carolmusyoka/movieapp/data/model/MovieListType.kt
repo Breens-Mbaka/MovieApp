@@ -9,5 +9,10 @@ enum class MovieListType {
     },
     IN_THEATERS {
         override fun toString() = "In Theaters"
+    },
+    ANIMATION {
+        override fun toString(): String {
+            return "Animation"
+        }
     }
 }
