@@ -28,6 +28,7 @@ class HomeViewModel : BaseViewModel(), GoToMovie {
     private val popularPage = MutableLiveData<Int>().apply { value = 1 }
     private val inTheatersPage = MutableLiveData<Int>().apply { value = 1 }
     private val upcomingPage = MutableLiveData<Int>().apply { value = 1 }
+    private val inGenres = MutableLiveData<Int>().apply { value = 1 }
 
     private val _goToShowAllEvent = MutableLiveData<Event<MovieListType>>()
 
@@ -105,6 +106,10 @@ class HomeViewModel : BaseViewModel(), GoToMovie {
 
     fun loadMorePopular() {
         popularPage.value = popularPage.value?.plus(1)
+    }
+
+    fun loadMoreInGenres(){
+        inGenres.value = inGenres.value?.plus(1)
     }
 
     fun loadMoreInTheaters() {
