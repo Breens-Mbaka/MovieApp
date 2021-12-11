@@ -50,6 +50,12 @@ TMDB_API_KEY = "YOUR_KEY_HERE"
 * Perform gradle sync.
 
 
+
+
+https://user-images.githubusercontent.com/44951692/145691930-b9086004-66ea-4407-96c1-5717c331e44e.mp4
+
+
+
 Project Roadmap
 
 - [x] Creating a new Movie app project
