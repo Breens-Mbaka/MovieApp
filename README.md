@@ -61,6 +61,6 @@ Project Roadmap
 - [x] Creating a new Movie app project
 - [x] Working with the API to fetch data
 - [x] Adding Paging 3
-- [x] Pretty Basic UI..planning to come up with a new one
+- [x] Pretty Basic UI..planning to come up with a new one (As you might have noticed, add categories ie with genres)
 - [ ] Code restructure
 - [ ] Upload on playstore
